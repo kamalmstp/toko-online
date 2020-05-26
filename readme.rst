@@ -1,70 +1,44 @@
-###################
-What is CodeIgniter
-###################
+status cart
+1. add to cart
+2. insert data customer
+3. insert shiping
+4. payment method
+5. closing unpaid
+6. closing paid
+7. process shiping
+8. restock
+9. reject
 
-CodeIgniter is an Application Development Framework - a toolkit - for people
-who build web sites using PHP. Its goal is to enable you to develop projects
-much faster than you could if you were writing code from scratch, by providing
-a rich set of libraries for commonly needed tasks, as well as a simple
-interface and logical structure to access these libraries. CodeIgniter lets
-you creatively focus on your project by minimizing the amount of code needed
-for a given task.
+-- step to invoice --
+cart
+cart-form-cust
+cart-shiping
+cart-payment
+invoice
+upload payment
 
-*******************
-Release Information
-*******************
 
-This repo contains in-development code for future releases. To download the
-latest stable release please visit the `CodeIgniter Downloads
-<https://codeigniter.com/download>`_ page.
+popup
+1. text
+2. image
+3. text image
 
-**************************
-Changelog and New Features
-**************************
 
-You can find a list of all changes for each release in the `user
-guide change log <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/changelog.rst>`_.
+image requirement
 
-*******************
-Server Requirements
-*******************
+1. banner-home 1920x570
+2. add top 370x280
+3. produk maksimal 720x920 atau 400x400 ideal
+4. popup landscape ( 620 x 410 ), potrait ( 370 x 600 ) atau menyesuaikan
+5. logo height 50px width 120px
+6. title page 1920x570
 
-PHP version 5.6 or newer is recommended.
 
-It should work on 5.3.7 as well, but we strongly advise you NOT to run
-such old versions of PHP, because of potential security and performance
-issues, as well as missing features.
+| REQUIREMENT |
 
-************
-Installation
-************
-
-Please see the `installation section <https://codeigniter.com/user_guide/installation/index.html>`_
-of the CodeIgniter User Guide.
-
-*******
-License
-*******
-
-Please see the `license
-agreement <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/license.rst>`_.
-
-*********
-Resources
-*********
-
--  `User Guide <https://codeigniter.com/docs>`_
--  `Language File Translations <https://github.com/bcit-ci/codeigniter3-translations>`_
--  `Community Forums <http://forum.codeigniter.com/>`_
--  `Community Wiki <https://github.com/bcit-ci/CodeIgniter/wiki>`_
--  `Community Slack Channel <https://codeigniterchat.slack.com>`_
-
-Report security issues to our `Security Panel <mailto:security@codeigniter.com>`_
-or via our `page on HackerOne <https://hackerone.com/codeigniter>`_, thank you.
-
-***************
-Acknowledgement
-***************
-
-The CodeIgniter team would like to thank EllisLab, all the
-contributors to the CodeIgniter project and you, the CodeIgniter user.
+1. daftar account bussiness.facebook (pixel)
+2. daftar account developer.facebook (facebook comment)
+3. daftar account sharethis (widget sharethis button)
+4. daftar account rajaongkir ( service kurir )
+5. setting e-mail sender untuk mengirim notifikasi setiap action
+6. e-mail toko akan mendapatkan notif jika ada customer melakukan pembelian sampai pembayaran (upload bukti tf)

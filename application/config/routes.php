@@ -1,54 +1,72 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-/*
-| -------------------------------------------------------------------------
-| URI ROUTING
-| -------------------------------------------------------------------------
-| This file lets you re-map URI requests to specific controller functions.
-|
-| Typically there is a one-to-one relationship between a URL string
-| and its corresponding controller class/method. The segments in a
-| URL normally follow this pattern:
-|
-|	example.com/class/method/id/
-|
-| In some instances, however, you may want to remap this relationship
-| so that a different class/function is called than the one
-| corresponding to the URL.
-|
-| Please see the user guide for complete details:
-|
-|	https://codeigniter.com/user_guide/general/routing.html
-|
-| -------------------------------------------------------------------------
-| RESERVED ROUTES
-| -------------------------------------------------------------------------
-|
-| There are three reserved routes:
-|
-|	$route['default_controller'] = 'welcome';
-|
-| This route indicates which controller class should be loaded if the
-| URI contains no data. In the above example, the "welcome" class
-| would be loaded.
-|
-|	$route['404_override'] = 'errors/page_missing';
-|
-| This route will tell the Router which controller/method to use if those
-| provided in the URL cannot be matched to a valid route.
-|
-|	$route['translate_uri_dashes'] = FALSE;
-|
-| This is not exactly a route, but allows you to automatically route
-| controller and method names that contain dashes. '-' isn't a valid
-| class or method name character, so it requires translation.
-| When you set this option to TRUE, it will replace ALL dashes in the
-| controller and method URI segments.
-|
-| Examples:	my-controller/index	-> my_controller/index
-|		my-controller/my-method	-> my_controller/my_method
-*/
-$route['default_controller'] = 'welcome';
-$route['404_override'] = '';
+$route['404_override'] = 'Home/page_404';
+$route['sitemap\.xml'] = "Home/sitemap";
+$route['pages/product-detail/(:any)'] = 'Product/detail_product/$1';
+// $route['pages/product/(:any)'] = 'Product/product_by_link/$1';
+$route['pages/product/search'] = 'Product/search/';
+$route['pages/about'] = 'Home/about';
+$route['pages/contact'] = 'Home/contact';
+$route['default_controller'] = 'Home/home';
 $route['translate_uri_dashes'] = FALSE;
+
+$route['pages/product-search/p'] = 'Product/search_product/';
+
+//user
+$route['pages/login'] = "User/login";
+$route['pages/update_account/(:any)'] = "User/f_edit_account/$1";
+
+//cart-order-invoice
+$route['pages/cart'] = "Cart";
+$route['pages/cart/form-customer'] = "Cart/cart_form_customer";
+$route['pages/cart/shiping'] = "Cart/cart_shiping";
+$route['pages/cart/cart-partner'] = "Cart/cart_partner/";
+$route['pages/cart/payment'] = "Cart/cart_payment/";
+$route['pages/cart/check-out'] = "Cart/check_out/";
+
+$route['pages/invoice/invoice-partner'] = "Invoice/invoice_partner/";
+$route['pages/invoice'] = "Invoice/invoice/";
+$route['pages/track-order'] = "Order/form_track_order/";
+$route['pages/confirm-payment'] = "Invoice/form_confirm_payment/";
+$route['pages/order-search'] = "Order/track_order_result/";
+
+$route['pages/profile'] = "Home/data_profile_partner/";
+$route['pages/reset-password'] = "User/f_reset_password/";
+$route['pages/create-new-password'] = "User/f_new_password/";
+
+// blog
+$route['pages/blog/(:num)'] = "Blog/blog/$1";
+$route['pages/blog'] = "Blog/blog";
+$route['pages/blog-detail/(:any)'] = "Blog/blog_detail/$1";
+$route['pages/blog-category'] = "Blog/blog_category";
+$route['pages/blog-category/(:num)'] = "Blog/blog_category/$1";
+$route['pages/blog-category/(:num)/(:num)'] = "Blog/blog_category/$1/$1";
+$route['pages/blog-search'] = 'Blog/search_blog';
+$route['pages/blog-search/(:num)'] = 'Blog/search_blog/';
+
+//gallery
+$route['pages/gallery/(:num)'] = "Home/gallery/$1";
+$route['pages/gallery'] = "Home/gallery";
+
+//service
+$route['pages/service'] = "Home/service";
+
+//term & condition
+$route['pages/terms'] = "Home/term_condition";
+
+//voucher_list
+$route['pages/voucher'] = "Home/voucher_list";
+
+//privacy policy
+$route['pages/privacy'] = "Home/privacy_policy";
+
+// cek resi
+$route['pages/cekresi'] = "Home/cek_resi";
+
+// detail order
+$route['pages/detailorder/(:any)'] = "Order/detail_order";
+
+$route['pages/404'] = "Order/detail_order";
+
+
